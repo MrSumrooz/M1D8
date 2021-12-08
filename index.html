@@ -6,6 +6,9 @@
         .myHeading {
           color: red;
         }
+        .bggreen{
+            background-color: green;
+        }
       </style>
     </head>
     <body>
@@ -158,18 +161,26 @@
 
             let ulBgNodes = document.getElementsByClassName("ul")
 
+            
             for ( let bgNode of ulBgNodes){
-                bgNode.style.color =" green"
-            }
-          //
+              bgNode.classList.add("bggreen")
+           }
         };
   
         /* EXERCISE 9
          Make the heading of the page change color every time the user clicks on it.
         */
   
+            
+
+
         const makeItClickable = function () {
-          //
+          
+            let headingColorNode =  document.getElementById("title")
+
+
+
+
         };
   
         /* EXERCISE 10
