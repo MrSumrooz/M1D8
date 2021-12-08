@@ -177,12 +177,29 @@
         const makeItClickable = function () {
           
             let headingColorNode =  document.getElementById("title")
-
+            headingColorNode.onclick = changecolor
 
 
 
         };
-  
+
+        let changecolor = function(e){
+            e.target.style.color = randomColor
+
+        } 
+
+        let randomColor = () => {
+                return Math.round(Math.random() * 256)
+
+        }
+
+         let    randomColorGernator = function(){
+
+            const red = randomColor()
+            const green = randomColor()
+            const blue = randomColor()
+            return rgb `(${red},${green},${blue})`
+         } 
         /* EXERCISE 10
          Change the footer text with something else when the user clicks on it.
         */
