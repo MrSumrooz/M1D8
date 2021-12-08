@@ -26,6 +26,7 @@
           <button onclick="addToTheSecond()" >Add new Li to second list</button>
           <button onclick="firstUlDisappear()" >remove First Ul list</button>
           <button onclick="paintItGreen()" >Ul BG Color</button>
+          <button onclick="makeItClickable()" >random color change Title</button>
 
           
         </div>
@@ -174,7 +175,7 @@
             
 
 
-        const makeItClickable = function () {
+        const makeItClickable = function (e) {
           
             let headingColorNode =  document.getElementById("title")
             headingColorNode.onclick = changecolor
@@ -189,7 +190,7 @@
         } 
 
         let randomColor = () => {
-                return Math.round(Math.random() * 256)
+                return Math.floor(Math.random() * 256)
 
         }
 
@@ -200,6 +201,8 @@
             const blue = randomColor()
             return rgb `(${red},${green},${blue})`
          } 
+
+
         /* EXERCISE 10
          Change the footer text with something else when the user clicks on it.
         */
